@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefits_compensations",
+  "info": {
+    "singularName": "benefits-compensation",
+    "pluralName": "benefits-compensations",
+    "displayName": "benefits-compensation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Insurance Plans",
+        "Disability Insurance",
+        "Tuition Reimbursement",
+        "Corporate Discounts",
+        "Paid Vacation",
+        "Retirement Plans",
+        "Paid Sick Leaves",
+        "Performance Bonus",
+        "Office Perks",
+        "Stock Options",
+        "Paid Parental Leaves",
+        "Childcare Facilities",
+        "Wellness Programs"
+      ]
+    },
+    "money": {
+      "type": "integer"
+    },
+    "condition": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "seniority": {
+      "type": "string"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "benefits_compensations"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag.tag",
+      "inversedBy": "benefits_compensations"
+    }
+  }
+}

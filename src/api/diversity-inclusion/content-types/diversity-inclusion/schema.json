@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diversity_inclusions",
+  "info": {
+    "singularName": "diversity-inclusion",
+    "pluralName": "diversity-inclusions",
+    "displayName": "diversity-inclusion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Gender",
+        "Education",
+        "Nationality",
+        "Culture",
+        "Language"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "diversity_inclusions"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "diversity_inclusions"
+    }
+  }
+}
