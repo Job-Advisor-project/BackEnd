@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tag",
     "pluralName": "tags",
-    "displayName": "Tag"
+    "displayName": "Tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,36 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "Work/Life balance",
+        "Compensation and Benefits",
+        "Diversity Inclusion",
+        "Environmental footprint",
+        "Career opportunities",
+        "First job"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "benefits_compensations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::benefits-compensation.benefits-compensation",
+      "mappedBy": "tag"
+    },
+    "social_responsibilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social-responsibility.social-responsibility",
+      "mappedBy": "tag"
+    },
+    "diversity_inclusions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::diversity-inclusion.diversity-inclusion",
+      "mappedBy": "tag"
     }
   }
 }
