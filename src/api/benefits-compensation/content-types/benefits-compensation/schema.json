@@ -4,7 +4,8 @@
   "info": {
     "singularName": "benefits-compensation",
     "pluralName": "benefits-compensations",
-    "displayName": "benefits-compensation"
+    "displayName": "Benefits-compensation",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
