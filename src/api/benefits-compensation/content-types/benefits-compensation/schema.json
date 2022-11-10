@@ -41,12 +41,6 @@
       "relation": "manyToOne",
       "target": "api::company.company",
       "inversedBy": "benefits_compensations"
-    },
-    "tag": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::tag.tag",
-      "inversedBy": "benefits_compensations"
     }
   }
 }

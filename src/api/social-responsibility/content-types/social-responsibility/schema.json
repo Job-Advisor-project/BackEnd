@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-responsibility",
     "pluralName": "social-responsibilities",
-    "displayName": "Social-responsibility"
+    "displayName": "Sustainability ",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -30,25 +31,20 @@
       "type": "richtext"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "company": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::company.company",
-      "inversedBy": "social_responsibilities"
-    },
-    "tag": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::tag.tag",
       "inversedBy": "social_responsibilities"
     }
   }

@@ -84,6 +84,12 @@
       "relation": "oneToMany",
       "target": "api::diversity-inclusion.diversity-inclusion",
       "mappedBy": "company"
+    },
+    "work_life_balances": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-life-balance.work-life-balance",
+      "mappedBy": "company"
     }
   }
 }

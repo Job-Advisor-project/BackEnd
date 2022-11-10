@@ -23,8 +23,6 @@
         "Income",
         "Skills",
         "Beliefs",
-        "Upbringing",
-        "National Origin",
         "Management Status"
       ]
     },
@@ -32,25 +30,20 @@
       "type": "richtext"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "company": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::company.company",
-      "inversedBy": "diversity_inclusions"
-    },
-    "tag": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::tag.tag",
       "inversedBy": "diversity_inclusions"
     }
   }
