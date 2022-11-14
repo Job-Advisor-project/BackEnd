@@ -12,15 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Environmental Responsibility",
-        "Ethical Responsibility",
-        "Philanthropic Responsibility",
-        "Economic Responsibility"
-      ]
-    },
     "title": {
       "type": "string"
     },
@@ -46,6 +37,9 @@
       "relation": "manyToOne",
       "target": "api::company.company",
       "inversedBy": "social_responsibilities"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }

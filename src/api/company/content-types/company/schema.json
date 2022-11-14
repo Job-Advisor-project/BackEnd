@@ -18,45 +18,16 @@
     "location": {
       "type": "string"
     },
-    "industry": {
-      "type": "enumeration",
-      "enum": [
-        "AGRICULTURE",
-        "ARTS",
-        "CONSTRUCTION",
-        "CONSUMER GOODS",
-        "CORPORATE SERVICES",
-        "DESIGN",
-        "EDUCATION",
-        "ENERGY & MINING",
-        "ENTERTAINMENT",
-        "FINANCE",
-        "HARDWARE & NETWORKING",
-        "HEALTH CARE",
-        "LEGAL",
-        "MANUFACTURING",
-        "MEDIA & COMMUNICATIONS",
-        "NON-PROFIT",
-        "PUBLIC ADMINISTRATION",
-        "PUBLIC SAFETY",
-        "REAL ESTATE",
-        "RECREATION & TRAVEL",
-        "RETAIL",
-        "SOFTWARE & IT SERVICES",
-        "TRANSPORTATION & LOGISTICS",
-        "WELLNESS & FITNESS",
-        "BUILD A CONTENT BUSINESS WITH TIM QUEEN"
-      ]
-    },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "description": {
       "type": "richtext"
@@ -90,6 +61,9 @@
       "relation": "oneToMany",
       "target": "api::work-life-balance.work-life-balance",
       "mappedBy": "company"
+    },
+    "industry": {
+      "type": "string"
     }
   }
 }

@@ -12,18 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Health insurance offerings (medical, dental, vision)",
-        "Life insurance",
-        "Parental leave",
-        "Stock options",
-        "Retirement plans",
-        "Vacation and sick time",
-        "Overtime pay"
-      ]
-    },
     "money": {
       "type": "biginteger"
     },
@@ -41,6 +29,9 @@
       "relation": "manyToOne",
       "target": "api::company.company",
       "inversedBy": "benefits_compensations"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }

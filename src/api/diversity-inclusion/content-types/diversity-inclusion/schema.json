@@ -12,20 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Race",
-        "Ethnicity",
-        "Age",
-        "Citizenship Status",
-        "Education",
-        "Income",
-        "Skills",
-        "Beliefs",
-        "Management Status"
-      ]
-    },
     "description": {
       "type": "richtext"
     },
@@ -45,6 +31,9 @@
       "relation": "manyToOne",
       "target": "api::company.company",
       "inversedBy": "diversity_inclusions"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }
